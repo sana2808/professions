@@ -9,19 +9,20 @@ import java.util.Set;
 @Entity
 public class User {
     @Id
-    @Column(name = "id", nullable = false)
-    private Integer id;
+    @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
 
-    @Column(name = "email", nullable = false, length = 45)
+    @Column(name = "email")
     private String email;
 
-    @Column(name = "encrypted_password", nullable = false, length = 45)
+    @Column(name = "encrypted_password")
     private String encryptedPassword;
 
-    @Column(name = "creared_at", nullable = false)
-    private Instant crearedAt;
+    @Column(name = "creared_at")
+    private LocalDate crearedAt;
 
-    public Instant getCrearedAt() {
+    public LocalDate getCrearedAt() {
         return crearedAt;
     }
 

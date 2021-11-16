@@ -10,26 +10,5 @@ public interface UserService {
 
     User findByEmail(String email);
 
-    int countCourseMates(int courseName);
-
-    List<User> showCourseMates();
-
-    int countUniversityMates(String university);
-
-    List<User> showUniversityMates();
-
-    int countFacultyMates(String faculty);
-
-    List<User> showFacultyMates();
-
-    int countSubjectMates(String subject);
-
-    List<User> showSubjectMates();
-
-    List<User> theMostRatedUsers();
-
-    int howManyLessonsUserHad (int userId);
-
-    String averageTimeOfUserSingleMentoring(int userId);
 
 }
